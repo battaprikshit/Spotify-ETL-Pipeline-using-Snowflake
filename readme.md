@@ -7,7 +7,7 @@ Now, we're poised to advance to the next pivotal phase - data loading into our r
 
 Overall, this project embodies a well-orchestrated symphony of technologies, culminating in a dynamic and efficient ETL pipeline.
 
----image
+![alt text]([https://github.com/battaprikshit/E-Commerce-Dimensional-Modelling/blob/main/instacart%20Screenshorts/FactDim.jpg](https://github.com/battaprikshit/Spotify-ETL-Pipeline-using-Snowflake/blob/main/spotify_screenshots/Architecture_ETL.jpg))
 
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
