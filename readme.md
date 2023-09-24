@@ -101,37 +101,27 @@ Now we have extracted the data using spotify api now we want to host this on AWS
 1. Login to your AWS Account
 2. Create the billing alarm so that you receive the billing alerts.
 3. Create the S3 bucket for the ETL Pipline.My bucket is as follows.
- ---------------image s3 bucket-----
+
+![alt text](https://github.com/battaprikshit/Spotify-ETL-Pipeline-using-Snowflake/blob/main/spotify_screenshots/image_1.png)
 
 4. Create two folders, one for raw data and another for transformed data. 
 5. Create another subforders processed and to_processed in raw data. Processed includes the data after processing and to_processed will have the raw data that direcly comes from spotify api.
---------image
+![alt text](https://github.com/battaprikshit/Spotify-ETL-Pipeline-using-Snowflake/blob/main/spotify_screenshots/image_2.png)
 
 6. Create another three subfolders in transformed_data which will have the album, artists and songs data that is transformed.
------ image
+![alt text](https://github.com/battaprikshit/Spotify-ETL-Pipeline-using-Snowflake/blob/main/spotify_screenshots/Image_3.png)
 
-7. Create the Lambda function to axtract the data using spotify api.Put the client id and client secret id in the environverment variable.This lambda function will extarct the raw data and store into raw data folder to_processed.Deploy and run the function. 
-
-The code for api data extarct function is provided in seperate foder.
-
+7. Create the Lambda function to axtract the data using spotify api.Put the client id and client secret id in the environverment variable.This lambda function will extarct the raw data and store into raw data folder to_processed.Deploy and run the function. The code for api data extarct function is provided in seperate foder.
 8. Create a new role and attach to the lambda function.The role should have permissions for s3 full access.
-
 9. Now we have the raw data in s3 bucket and our next step is to do the transformation.
 10. Create another lambda function so that transformation can be performed. The code for another lambda function is attached in the repository.
-
 11. Now the data should be transformed and put to their respective folder ie Album,Song and Artist.
-
 12. Next step is to copy the file which we have transformed and then put that file to the folder processed because the raw file that has been processed so that we do not process the same data again.Then delete the file which is present in to_processed folder.
-
 13. Now we have the transformed data.
-
 14. Next step is to apply the triggers
 15. Attach the Amazon Cloudwatch daily trigger to the first lambda function which extract data from api so that it can run daily or as per the business needs.
-
 16. Next add the trigger to the lambda function which do the transformation. I have added All Object created event to the Lambda function so that if any object is created in the to_processed bucket then it triggers the lambda fucntion and data is transformed.
-
 17. Now the new files are getting aded to the transformed_data folder.
-
 18. Now our next step is to load this data to Snowflake.
 
 
