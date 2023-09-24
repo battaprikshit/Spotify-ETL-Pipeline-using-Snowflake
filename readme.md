@@ -6,7 +6,6 @@ In this project, I've successfully implemented an ETL pipeline for Spotify data,
 Now, we're poised to advance to the next pivotal phase - data loading into our robust data warehouse via Snowflake. To streamline this process, we'll employ Snowpipe, a powerful tool that facilitates the seamless flow of data into Snowflake, enhancing efficiency and real-time availability.
 
 Overall, this project embodies a well-orchestrated symphony of technologies, culminating in a dynamic and efficient ETL pipeline.
-
 ![alt text](https://github.com/battaprikshit/Spotify-ETL-Pipeline-using-Snowflake/blob/main/spotify_screenshots/Architecture_ETL.jpg)
 
 ## Prerequisites
